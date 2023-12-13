@@ -3,7 +3,7 @@
 #include <any>
 #include "ap_fixed.h"
 
-class toolip_emulator_v1 : public hls4mlEmulator::Model{
+class TOoLLip_emulator_v1 : public hls4mlEmulator::Model{
     private:
         input_t _input[N_INPUT_1_1*N_INPUT_2_1];
         result_t _result[N_LAYER_12];
@@ -31,7 +31,7 @@ class toolip_emulator_v1 : public hls4mlEmulator::Model{
 
 extern "C" hls4mlEmulator::Model* create_model()
 {
-    return new toolip_emulator_v1;
+    return new TOoLLip_emulator_v1;
 }
 
 extern "C" void destroy_model(hls4mlEmulator::Model* m)
