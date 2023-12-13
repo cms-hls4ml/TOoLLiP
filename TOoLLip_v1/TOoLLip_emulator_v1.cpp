@@ -17,7 +17,8 @@ class TOoLLip_emulator_v1 : public hls4mlEmulator::Model{
 
         virtual void predict()
         {
-            toolip_emulator_v1(_input, _result);
+            //TOoLLip_emulator_v1(_input, _result);
+            myproject(_input, _result);
         }
 
         virtual void read_result(std::any result)
