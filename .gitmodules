@@ -1,0 +1,3 @@
+[submodule "TOoLLip_v1/L1JetTagger"]
+	path = TOoLLip_v1/L1JetTagger
+	url = https://github.com/ucsd-hep-ex/L1JetTagger
