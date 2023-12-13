@@ -3,7 +3,7 @@
 TOoLLip_emulator_v1.so: TOoLLip_emulator_v1.o myproject.o
 	$(CXX) $(CXXFLAGS) $(LD_FLAGS) -shared $^ -o $@
 
-%.o: L1JetTagger/hls4ml_prj/firmware/%.cpp
+%.o: NN/%.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 %.o: %.cpp
