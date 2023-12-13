@@ -1,6 +1,6 @@
 .PHONY: clean
 
-TOoLLip_emulator_v1.so: TOoLLip_emulator_v1.o TOoLLip.o
+TOoLLip_emulator_v1.so: TOoLLip_emulator_v1.o myproject.o
 	$(CXX) $(CXXFLAGS) $(LD_FLAGS) -shared $^ -o $@
 
 %.o: L1JetTagger/hls4ml_prj/firmware/%.cpp
@@ -10,4 +10,4 @@ TOoLLip_emulator_v1.so: TOoLLip_emulator_v1.o TOoLLip.o
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm TOoLLip_emulator_v1.so TOoLLip_emulator_v1.o TOoLLip.o
+	rm TOoLLip_emulator_v1.so TOoLLip_emulator_v1.o myproject.o

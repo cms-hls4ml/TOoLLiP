@@ -1,4 +1,4 @@
-#include "toollip.h" //include of the top level of HLS model
+#include "L1JetTagger/hls4ml_prj/firmware/myproject.h" //include of the top level of HLS model
 #include "emulator.h" //include of emulator modeling
 #include <any>
 #include "ap_fixed.h"
