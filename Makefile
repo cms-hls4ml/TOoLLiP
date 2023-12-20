@@ -19,7 +19,7 @@ all: $(ALL_VERSIONS)
 install: all
 	@rm -rf $(PREFIX)/lib64
 	@mkdir -p $(PREFIX)/lib64
-	cp TOoLLip_*.so $(PREFIX)/lib64
+	cp TOoLLiP_*.so $(PREFIX)/lib64
 
 %.so:
 	$(MAKE) -C $(@D) INCLUDES="$(INCLUDES)" LD_FLAGS="$(LD_FLAGS)" CXXFLAGS="$(CXXFLAGS)"
