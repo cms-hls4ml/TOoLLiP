@@ -1,4 +1,4 @@
-#include "L1JetTagger/hls4ml_prj/firmware/myproject.h" //include of the top level of HLS model
+#include "NN/TOoLLip_v1.h" //include of the top level of HLS model
 #include "emulator.h" //include of emulator modeling
 #include <any>
 #include "ap_fixed.h"
@@ -17,8 +17,7 @@ class TOoLLip_emulator_v1 : public hls4mlEmulator::Model{
 
         virtual void predict()
         {
-            //TOoLLip_emulator_v1(_input, _result);
-            myproject(_input, _result);
+            TOoLLip_v1(_input, _result);
         }
 
         virtual void read_result(std::any result)
