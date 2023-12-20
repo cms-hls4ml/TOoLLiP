@@ -1,5 +1,5 @@
-#ifndef MYPROJECT_H_
-#define MYPROJECT_H_
+#ifndef TOOLLIP_V1_H_
+#define TOOLLIP_V1_H_
 
 #include "ap_fixed.h"
 #include "ap_int.h"
