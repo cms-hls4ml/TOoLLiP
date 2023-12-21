@@ -6,7 +6,7 @@
 #ifndef B12_H_
 #define B12_H_
 
-#ifndef __SYNTHESIS__
+#ifdef __HLS4ML_LOAD_TXT_WEIGHTS__
 bias12_t b12[1];
 #else
 bias12_t b12[1] = {0.0000};

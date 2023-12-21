@@ -6,7 +6,7 @@
 #ifndef B15_H_
 #define B15_H_
 
-#ifndef __SYNTHESIS__
+#ifdef __HLS4ML_LOAD_TXT_WEIGHTS__
 bias15_t b15[10];
 #else
 bias15_t b15[10] = {0.0000, 0.0000, 0.0000, 0.0000, 0.0625, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000};

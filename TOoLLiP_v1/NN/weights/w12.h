@@ -6,7 +6,7 @@
 #ifndef W12_H_
 #define W12_H_
 
-#ifndef __SYNTHESIS__
+#ifdef __HLS4ML_LOAD_TXT_WEIGHTS__
 weight12_t w12[10];
 #else
 weight12_t w12[10] = {0.0000, 0.0000, 5.7500, 0.0000, -3.5625, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000};

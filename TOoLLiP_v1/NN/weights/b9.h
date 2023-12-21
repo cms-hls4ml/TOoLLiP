@@ -6,7 +6,7 @@
 #ifndef B9_H_
 #define B9_H_
 
-#ifndef __SYNTHESIS__
+#ifdef __HLS4ML_LOAD_TXT_WEIGHTS__
 bias9_t b9[10];
 #else
 bias9_t b9[10] = {0.0000, 0.0000, 0.4375, 0.0000, -0.0625, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000};
