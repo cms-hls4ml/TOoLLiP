@@ -1,4 +1,4 @@
-TOoLLip_v1/NN/
 .gitignore
 *.so
 *.o
+*~
