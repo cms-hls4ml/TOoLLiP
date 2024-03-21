@@ -3,6 +3,8 @@
 #include "TOoLLiP_v1.h"
 #include "parameters.h"
 
+namespace hls4ml_toollip_v1 {
+
 void TOoLLiP_v1(
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
     result_t layer14_out[N_LAYER_12]
@@ -70,4 +72,5 @@ void TOoLLiP_v1(
 
     nnet::sigmoid<layer12_t, result_t, sigmoid_config14>(layer12_out, layer14_out); // sigmoid
 
+} // namespace hls4ml_toollip_v1
 }

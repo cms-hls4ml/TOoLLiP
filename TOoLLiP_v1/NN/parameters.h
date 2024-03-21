@@ -27,6 +27,8 @@
 #include "weights/w12.h"
 #include "weights/b12.h"
 
+namespace hls4ml_toollip_v1 {
+
 // hls-fpga-machine-learning insert layer-config
 // q_conv1d
 struct config15_mult : nnet::dense_config {
@@ -203,5 +205,6 @@ struct sigmoid_config14 : nnet::activ_config {
     typedef sigmoid_table_t table_t;
 };
 
+} // namespace hls4ml_toollip_v1
 
 #endif
