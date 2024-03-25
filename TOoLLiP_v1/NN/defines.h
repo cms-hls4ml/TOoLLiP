@@ -5,24 +5,24 @@
 #include "ap_int.h"
 #include "nnet_utils/nnet_types.h"
 #include <cstddef>
-#include <cstdio>
+ #include <cstdio>
+
+namespace hls4ml_toollip_v1 {
 
 // hls-fpga-machine-learning insert numbers
-#define N_INPUT_1_1 10
-#define N_INPUT_2_1 14
-#define N_OUTPUTS_15 10
-#define N_FILT_15 10
-#define N_OUTPUTS_2 10
-#define N_FILT_2 10
-#define N_OUTPUTS_16 10
-#define N_FILT_16 10
-#define N_OUTPUTS_5 10
-#define N_FILT_5 10
-#define N_FILT_8 10
-#define N_LAYER_9 10
-#define N_LAYER_9 10
-#define N_LAYER_12 1
-#define N_LAYER_12 1
+static const int N_INPUT_1_1 = 10;
+static const int N_INPUT_2_1 = 14;
+static const int N_OUTPUTS_15 = 10;
+static const int N_FILT_15 = 10;
+static const int N_OUTPUTS_2 = 10;
+static const int N_FILT_2 = 10;
+static const int N_OUTPUTS_16 = 10;
+static const int N_FILT_16 = 10;
+static const int N_OUTPUTS_5 = 10;
+static const int N_FILT_5 = 10;
+static const int N_FILT_8 = 10;
+static const int N_LAYER_9 = 10;
+static const int N_LAYER_12 = 1;
 
 // hls-fpga-machine-learning insert layer-precision
 typedef ap_fixed<16,6> input_t;
@@ -50,5 +50,7 @@ typedef ap_fixed<8,4> bias12_t;
 typedef ap_uint<1> layer12_index;
 typedef ap_fixed<16,6> result_t;
 typedef ap_fixed<18,8> sigmoid_table_t;
+
+} // namespace hls4ml_toollip_v1
 
 #endif

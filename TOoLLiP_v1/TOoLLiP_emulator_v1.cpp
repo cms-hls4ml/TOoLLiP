@@ -3,6 +3,8 @@
 #include <any>
 #include "ap_fixed.h"
 
+using namespace hls4ml_toollip_v1;
+
 class TOoLLiP_emulator_v1 : public hls4mlEmulator::Model{
     private:
         input_t _input[N_INPUT_1_1*N_INPUT_2_1];
