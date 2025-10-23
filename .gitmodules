@@ -1,3 +1,6 @@
 [submodule "TOoLLip_v1/L1JetTagger"]
 	path = TOoLLiP_v1/L1JetTagger
 	url = https://github.com/ucsd-hep-ex/L1JetTagger
+[submodule "TOoLLiP_v3/L1LLPJetTagger"]
+	path = TOoLLiP_v3/L1LLPJetTagger
+	url = https://github.com/Brainz22/L1LLPJetTagger.git
