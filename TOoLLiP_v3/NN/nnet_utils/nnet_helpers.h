@@ -181,7 +181,7 @@ template <class data_T, class save_T> void save_output_array(hls::stream<data_T>
     }
 }
 
-// We don't want to include save_T in this function because it will be inserted into TOoLLiP_v3.cpp
+// We don't want to include save_T in this function because it will be inserted into myproject.cpp
 // so a workaround with element size is used
 template <class data_T> void save_layer_output(data_T *data, const char *layer_name, size_t layer_size) {
     if (!trace_enabled)
