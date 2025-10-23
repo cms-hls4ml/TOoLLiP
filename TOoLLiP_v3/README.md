@@ -29,3 +29,7 @@ Each of the following files is contained in the submodule attached in this repo.
 
 ![HLS_qk_ROCCurve_4c](https://github.com/Brainz22/L1LLPJetTagger/blob/main/test4c.pdf)
 
+- C synthesis results:
+
+![Results](https://github.com/Brainz22/L1LLPJetTagger/blob/main/TOoLLiP_v3/reportInfo.pdf)
+
