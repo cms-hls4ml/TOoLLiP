@@ -30,7 +30,7 @@
 namespace hls4ml_model_emu_tmp_v {
 
 // hls-fpga-machine-learning insert layer-config
-// q_separableconv1d
+// q_conv1d
 struct config15_mult : nnet::dense_config {
     static const unsigned n_in = 140;
     static const unsigned n_out = 100;
@@ -38,9 +38,9 @@ struct config15_mult : nnet::dense_config {
     static const unsigned strategy = nnet::latency;
     static const unsigned n_zeros = 105;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
-    typedef q_separableconv1d_accum_t accum_t;
+    typedef q_conv1d_accum_t accum_t;
     typedef bias3_t bias_t;
-    typedef q_separableconv1d_weight_t weight_t;
+    typedef weight3_t weight_t;
     template<class data_T, class res_T, class CONFIG_T>
     using kernel = nnet::DenseLatency<data_T, res_T, CONFIG_T>;
     template<class x_T, class y_T>
@@ -71,9 +71,9 @@ struct config15 : nnet::conv1d_config {
     static const unsigned n_pixels = out_width / n_partitions;
     template<class data_T, class CONFIG_T>
     using fill_buffer = hls4ml_model_emu_tmp_v::fill_buffer_15<data_T, CONFIG_T>;
-    typedef q_separableconv1d_accum_t accum_t;
+    typedef q_conv1d_accum_t accum_t;
     typedef bias3_t bias_t;
-    typedef q_separableconv1d_weight_t weight_t;
+    typedef weight3_t weight_t;
     typedef config15_mult mult_config;
     template<unsigned K, unsigned S, unsigned W>
     using scale_index = nnet::scale_index_regular<K, S, W>;
@@ -91,7 +91,7 @@ struct relu_config5 : nnet::activ_config {
     typedef q_activation_table_t table_t;
 };
 
-// q_separableconv1d_2
+// q_conv1d_1
 struct config16_mult : nnet::dense_config {
     static const unsigned n_in = 100;
     static const unsigned n_out = 100;
@@ -99,9 +99,9 @@ struct config16_mult : nnet::dense_config {
     static const unsigned strategy = nnet::latency;
     static const unsigned n_zeros = 75;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
-    typedef q_separableconv1d_2_accum_t accum_t;
+    typedef q_conv1d_1_accum_t accum_t;
     typedef bias6_t bias_t;
-    typedef q_separableconv1d_2_weight_t weight_t;
+    typedef weight6_t weight_t;
     template<class data_T, class res_T, class CONFIG_T>
     using kernel = nnet::DenseLatency<data_T, res_T, CONFIG_T>;
     template<class x_T, class y_T>
@@ -132,9 +132,9 @@ struct config16 : nnet::conv1d_config {
     static const unsigned n_pixels = out_width / n_partitions;
     template<class data_T, class CONFIG_T>
     using fill_buffer = hls4ml_model_emu_tmp_v::fill_buffer_16<data_T, CONFIG_T>;
-    typedef q_separableconv1d_2_accum_t accum_t;
+    typedef q_conv1d_1_accum_t accum_t;
     typedef bias6_t bias_t;
-    typedef q_separableconv1d_2_weight_t weight_t;
+    typedef weight6_t weight_t;
     typedef config16_mult mult_config;
     template<unsigned K, unsigned S, unsigned W>
     using scale_index = nnet::scale_index_regular<K, S, W>;
@@ -168,8 +168,8 @@ struct config10 : nnet::dense_config {
     static const unsigned io_type = nnet::io_parallel;
     static const unsigned strategy = nnet::latency;
     static const unsigned reuse_factor = 1;
-    static const unsigned n_zeros = 86;
-    static const unsigned n_nonzeros = 14;
+    static const unsigned n_zeros = 93;
+    static const unsigned n_nonzeros = 7;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
     typedef q_dense_accum_t accum_t;

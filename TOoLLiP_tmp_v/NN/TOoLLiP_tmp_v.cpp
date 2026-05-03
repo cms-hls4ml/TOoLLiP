@@ -45,11 +45,11 @@ void TOoLLiP_tmp_v(
     layer12_t layer12_out[10];
     #pragma HLS ARRAY_PARTITION variable=layer12_out complete dim=0
 
-    nnet::pointwise_conv_1d_cl<input_t, layer3_t, config15>(input_1, layer3_out, w3, b3); // q_separableconv1d
+    nnet::pointwise_conv_1d_cl<input_t, layer3_t, config15>(input_1, layer3_out, w3, b3); // q_conv1d
 
     nnet::relu<layer3_t, layer5_t, relu_config5>(layer3_out, layer5_out); // q_activation
 
-    nnet::pointwise_conv_1d_cl<layer5_t, layer6_t, config16>(layer5_out, layer6_out, w6, b6); // q_separableconv1d_2
+    nnet::pointwise_conv_1d_cl<layer5_t, layer6_t, config16>(layer5_out, layer6_out, w6, b6); // q_conv1d_1
 
     nnet::relu<layer6_t, layer8_t, relu_config8>(layer6_out, layer8_out); // q_activation_1
 
