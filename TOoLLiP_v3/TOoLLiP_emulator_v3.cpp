@@ -7,13 +7,13 @@ using namespace hls4ml_model_emu_v3;
 
 class TOoLLiP_emulator_v3 : public hls4mlEmulator::Model{
     private:
-        input_t _input[10*14];
+        input_t _input[10*13];
         result_t _result[1];
     public:
         virtual void prepare_input(std::any input)
         {
             input_t* input_p = std::any_cast<input_t*>(input);
-            for(int i = 0; i < 10*14; ++i)
+            for(int i = 0; i < 10*13; ++i)
                 _input[i] = std::any_cast<input_t>(input_p[i]);
                 //_input[i] = input_p[i];
         }
